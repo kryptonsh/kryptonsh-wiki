@@ -1,14 +1,15 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+import slug from 'remark-slug';
 
 const config = defineConfig({
-	extensions: ['.svelte.md', '.md', '.svx'],
+  extensions: ['.svelte.md', '.md', '.svx'],
 
-	smartypants: {
-		dashes: 'oldschool'
-	},
+  smartypants: {
+    dashes: 'oldschool',
+  },
 
-	remarkPlugins: [],
-	rehypePlugins: []
+  remarkPlugins: [slug],
+  rehypePlugins: [],
 });
 
 export default config;
