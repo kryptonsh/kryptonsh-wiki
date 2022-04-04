@@ -1,5 +1,0 @@
-<script>
-  export const name = 'Home';
-</script>
-
-# Home

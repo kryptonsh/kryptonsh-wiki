@@ -7,16 +7,20 @@ const theme = {
     background: '#151515',
     foreground: '#242424',
     elevated: '#2e2e2e',
-    muted: 'darkgray'
+    muted: '#272727',
   },
   textColor: {
     primary: '#fff',
-    secondary: 'darkgray'
+    secondary: 'darkgray',
+    muted: '#272727',
   },
   fontFamily: {
+    ubuntu: ['Ubuntu', 'sans-serif'],
+    roboto: ['Roboto', 'sans-serif'],
+    condensed: ['Roboto Condensed', 'sans-serif'],
     sans: ['Roboto', 'sans-serif'],
-    mono: ['JetBrains Mono', 'monospace']
-  }
+    mono: ['JetBrains Mono', 'monospace'],
+  },
 };
 
 const config = {
@@ -24,11 +28,11 @@ const config = {
 
   theme: {
     extend: {
-      ...theme
-    }
+      ...theme,
+    },
   },
 
-  plugins: []
+  plugins: [],
 };
 
 module.exports = config;

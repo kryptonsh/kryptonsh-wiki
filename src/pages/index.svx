@@ -1,0 +1,7 @@
+<script>
+  export const name = 'Home';
+</script>
+
+# Home
+
+![your-pic-caption-name](/images/home/bvoo.gif)
