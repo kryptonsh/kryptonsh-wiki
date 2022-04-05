@@ -5,9 +5,7 @@
 
   let nodeName = '';
   $: {
-    nodeName = $activeNode
-      ? kebabToSentenceCase(getFriendlyNodeName($activeNode))
-      : '';
+    nodeName = $activeNode ? kebabToSentenceCase(getFriendlyNodeName($activeNode)) : '';
   }
 </script>
 

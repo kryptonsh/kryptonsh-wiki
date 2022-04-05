@@ -1,16 +1,14 @@
 import routify from '@roxi/routify/vite-plugin';
+import adapterAuto from '@sveltejs/adapter-auto';
 import cfAdapter from '@sveltejs/adapter-cloudflare';
-import nodeAdapter from '@sveltejs/adapter-node';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 import mdsvexConfig from './mdsvex.config.js';
 
-let adapter;
+let adapter = adapterAuto();
 
 if (process.env.NODE_ENV === 'production') {
   adapter = cfAdapter();
-} else {
-  adapter = nodeAdapter({ out: 'dist' });
 }
 
 /** @type {import('@sveltejs/kit').Config} */
