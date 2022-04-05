@@ -22,7 +22,7 @@
       }
     });
 
-  let sidebar = true;
+  let sidebar = false;
 
   function toggleSidebar() {
     sidebar = !sidebar;
