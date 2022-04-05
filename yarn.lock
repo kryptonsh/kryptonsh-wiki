@@ -158,11 +158,11 @@ __metadata:
   linkType: hard
 
 "@sveltejs/adapter-node@npm:^1.0.0-next.0":
-  version: 1.0.0-next.0
-  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.0"
+  version: 1.0.0-next.73
+  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.73"
   dependencies:
-    "@sveltejs/app-utils": 1.0.0-next.0
-  checksum: c32403d38175ee98cb5c882f2ea83949e6508e79fb5f63bd0280601e7f41f41ed908ac523c77e81e9da968903c47a3d496eed466a9ad9882266f5085c313058a
+    tiny-glob: ^0.2.9
+  checksum: 65396e2d7b05e1c0d79c2e6e7edece915774cdc2d1dab9c78986fccac9222df6f5bd8c9cdb7c40ef8b6200e0998de82db994622b27867ef10347a05cda7dfc5e
   languageName: node
   linkType: hard
 
@@ -172,15 +172,6 @@ __metadata:
   dependencies:
     esbuild: ^0.14.21
   checksum: 754ab47d5fca2474ec8503b70956457aaf18fb0e3566fc77463ca58188b7b4fe5199424742af64bc294c834b64ca4c668af20864f5bac3ae17a5d24418341895
-  languageName: node
-  linkType: hard
-
-"@sveltejs/app-utils@npm:1.0.0-next.0":
-  version: 1.0.0-next.0
-  resolution: "@sveltejs/app-utils@npm:1.0.0-next.0"
-  dependencies:
-    mime: ^2.4.6
-  checksum: a1a1b43b3ff3cc4db501870aea1f1855a9bdb9d97109edebf662a8154b8573260f21045de3743b9bf77a3f7d323ad7ae76803f0f0d499ff7f6fce2538a194139
   languageName: node
   linkType: hard
 
@@ -546,9 +537,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001317":
-  version: 1.0.30001320
-  resolution: "caniuse-lite@npm:1.0.30001320"
-  checksum: d1f52e9d8e2316f2dba4c7adb4c5957e535b07a4a90ac5432bef3a83b4dab487f0efaa6eff3cda75a52bf044d09886ec583299595389fe0a92cf135f4f07692e
+  version: 1.0.30001325
+  resolution: "caniuse-lite@npm:1.0.30001325"
+  checksum: 383a86a513381e3927a30b578ac8616ce388af79dc5dced22e18fffaef17c0bed0e324eadba1b13a6c15b3ec39128fbcfbb097992d3aca206feef5a539c4639f
   languageName: node
   linkType: hard
 
@@ -897,9 +888,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.84":
-  version: 1.4.96
-  resolution: "electron-to-chromium@npm:1.4.96"
-  checksum: 6a7f97c5fc7080b8739df269a9da0047aee9153807af99e72138dc416ea1dd8ccc167812c66c49d3bb83a55098cd8669ef075515d999aad13b266da72bc98cee
+  version: 1.4.103
+  resolution: "electron-to-chromium@npm:1.4.103"
+  checksum: ae5783cafb1f49e92946416fafc5af45d85e5a6847ce00f4cf4b4d2e54bca1d27b26699ea2cedf5b700c1a0190329e7ec20dc06198daa9f0c343044bc074ae75
   languageName: node
   linkType: hard
 
@@ -1682,7 +1673,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"lilconfig@npm:^2.0.4, lilconfig@npm:^2.0.5":
+"lilconfig@npm:^2.0.5":
   version: 2.0.5
   resolution: "lilconfig@npm:2.0.5"
   checksum: f7bb9e42656f06930ad04e583026f087508ae408d3526b8b54895e934eb2a966b7aafae569656f2c79a29fe6d779b3ec44ba577e80814734c8655d6f71cdf2d1
@@ -1789,15 +1780,6 @@ __metadata:
     braces: ^3.0.2
     picomatch: ^2.3.1
   checksum: 02a17b671c06e8fefeeb6ef996119c1e597c942e632a21ef589154f23898c9c6a9858526246abb14f8bca6e77734aa9dcf65476fca47cedfb80d9577d52843fc
-  languageName: node
-  linkType: hard
-
-"mime@npm:^2.4.6":
-  version: 2.6.0
-  resolution: "mime@npm:2.6.0"
-  bin:
-    mime: cli.js
-  checksum: 1497ba7b9f6960694268a557eae24b743fd2923da46ec392b042469f4b901721ba0adcf8b0d3c2677839d0e243b209d76e5edcbd09cfdeffa2dfb6bb4df4b862
   languageName: node
   linkType: hard
 
@@ -2160,22 +2142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-load-config@npm:^3.1.0":
-  version: 3.1.3
-  resolution: "postcss-load-config@npm:3.1.3"
-  dependencies:
-    lilconfig: ^2.0.4
-    yaml: ^1.10.2
-  peerDependencies:
-    ts-node: ">=9.0.0"
-  peerDependenciesMeta:
-    ts-node:
-      optional: true
-  checksum: 7d187d339f259265bf1de9efff39223b94cb2cabe4610516896a16ec96f713b9b6505b4247d870f134842f8441b442a0fdc33a782b78ae3bec6db2aed4aeafec
-  languageName: node
-  linkType: hard
-
-"postcss-load-config@npm:^3.1.1":
+"postcss-load-config@npm:^3.1.0, postcss-load-config@npm:^3.1.1":
   version: 3.1.4
   resolution: "postcss-load-config@npm:3.1.4"
   dependencies:
@@ -2205,12 +2172,12 @@ __metadata:
   linkType: hard
 
 "postcss-selector-parser@npm:^6.0.6, postcss-selector-parser@npm:^6.0.9":
-  version: 6.0.9
-  resolution: "postcss-selector-parser@npm:6.0.9"
+  version: 6.0.10
+  resolution: "postcss-selector-parser@npm:6.0.10"
   dependencies:
     cssesc: ^3.0.0
     util-deprecate: ^1.0.2
-  checksum: f8161ab4d3e5c76b8467189c6d164ba0f6b6e74677435f29e34caa1df01e052b582b4ae4f7468b2243c4befdd8bdcdb7685542d1b2fca8deae21b3e849c78802
+  checksum: 46afaa60e3d1998bd7adf6caa374baf857cc58d3ff944e29459c9a9e4680a7fe41597bd5b755fc81d7c388357e9bf67c0251d047c640a09f148e13606b8a8608
   languageName: node
   linkType: hard
 
@@ -2716,56 +2683,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-preprocess@npm:^4.0.0":
-  version: 4.10.4
-  resolution: "svelte-preprocess@npm:4.10.4"
-  dependencies:
-    "@types/pug": ^2.0.4
-    "@types/sass": ^1.16.0
-    detect-indent: ^6.0.0
-    magic-string: ^0.25.7
-    sorcery: ^0.10.0
-    strip-indent: ^3.0.0
-  peerDependencies:
-    "@babel/core": ^7.10.2
-    coffeescript: ^2.5.1
-    less: ^3.11.3 || ^4.0.0
-    postcss: ^7 || ^8
-    postcss-load-config: ^2.1.0 || ^3.0.0
-    pug: ^3.0.0
-    sass: ^1.26.8
-    stylus: ^0.55.0
-    sugarss: ^2.0.0
-    svelte: ^3.23.0
-    typescript: ^3.9.5 || ^4.0.0
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    coffeescript:
-      optional: true
-    less:
-      optional: true
-    node-sass:
-      optional: true
-    postcss:
-      optional: true
-    postcss-load-config:
-      optional: true
-    pug:
-      optional: true
-    sass:
-      optional: true
-    stylus:
-      optional: true
-    sugarss:
-      optional: true
-    typescript:
-      optional: true
-  checksum: 323eca0fe691875b2b32a6c421aeb0aeee9e76050116e2d4de1bc027d8991ff150af3667b2880e5d3e19c80ff3fedaa70ff9c5e7b495a50acd5a268659578894
-  languageName: node
-  linkType: hard
-
-"svelte-preprocess@npm:^4.10.1":
+"svelte-preprocess@npm:^4.0.0, svelte-preprocess@npm:^4.10.1":
   version: 4.10.5
   resolution: "svelte-preprocess@npm:4.10.5"
   dependencies:
