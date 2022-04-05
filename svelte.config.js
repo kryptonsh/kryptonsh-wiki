@@ -1,8 +1,17 @@
-import adapter from '@sveltejs/adapter-auto';
+import routify from '@roxi/routify/vite-plugin';
+import cfAdapter from '@sveltejs/adapter-cloudflare';
+import nodeAdapter from '@sveltejs/adapter-node';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 import mdsvexConfig from './mdsvex.config.js';
-import routify from '@roxi/routify/vite-plugin';
+
+let adapter;
+
+if (process.env.NODE_ENV === 'production') {
+  adapter = cfAdapter();
+} else {
+  adapter = nodeAdapter({ out: 'dist' });
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -22,7 +31,7 @@ const config = {
   ],
 
   kit: {
-    adapter: adapter(),
+    adapter,
 
     vite: {
       plugins: [routify({ routesDir: 'src/pages' })],
