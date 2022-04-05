@@ -21,13 +21,22 @@
         $activeNode = null;
       }
     });
+
+  let sidebar = true;
+
+  function toggleSidebar() {
+    sidebar = !sidebar;
+  }
 </script>
 
-<Navbar />
-<main>
-  <Scroller>
-    <Sidebar {rootNode} />
-  </Scroller>
+<Navbar on:sidebar={toggleSidebar} />
+<div class="popup-bg {sidebar ? '' : 'hidden'}" on:click={() => (sidebar = false)} />
+<main class={sidebar ? '' : 'no-sidebar'}>
+  <div class="sidebar-container {sidebar ? 'open' : 'closed'}">
+    <Scroller>
+      <Sidebar {rootNode} on:clicked={() => (sidebar = false)} />
+    </Scroller>
+  </div>
   <Scroller>
     <section class="p-4">
       <div class="markdown-body">
@@ -39,3 +48,39 @@
     </section>
   </Scroller>
 </main>
+
+<style lang="scss">
+  .sidebar-container {
+    @apply flex;
+
+    width: $sidebar-width;
+
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      bottom: 0;
+
+      &.closed {
+        transform: translateX(-$sidebar-width);
+      }
+    }
+  }
+
+  main {
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .popup-bg {
+    @apply fixed right-0 bottom-0 left-0;
+    top: $header-height;
+
+    @media screen and (max-width: 768px) {
+      @apply bg-black opacity-50;
+    }
+
+    transition: all 0.2s ease-in-out;
+  }
+</style>

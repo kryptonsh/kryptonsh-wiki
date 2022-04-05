@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getFriendlyNodeName } from '$lib/utils';
+  import { createEventDispatcher } from 'svelte';
   import SidebarNode from './SidebarNode.svelte';
 
   export let rootNode: RNodeRuntime;
@@ -27,10 +28,16 @@
     nodeTree = [];
     getNodeTree(rootNode);
   }
+
+  const dispatch = createEventDispatcher();
+
+  function onClicked() {
+    dispatch('clicked');
+  }
 </script>
 
 <aside class="flex h-full flex-col gap-2 bg-[#1c1c1c] p-4">
   {#each nodeTree as node}
-    <SidebarNode {node} />
+    <SidebarNode on:clicked={onClicked} {node} />
   {/each}
 </aside>

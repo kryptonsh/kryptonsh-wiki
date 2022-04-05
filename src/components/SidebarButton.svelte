@@ -1,6 +1,6 @@
 <script lang="ts">
   import { kebabToSentenceCase } from '$lib/utils';
-
+  import { createEventDispatcher } from 'svelte';
   import IndentGuide from './IndentGuide.svelte';
 
   export let active: boolean;
@@ -8,14 +8,20 @@
   export let name: string;
   export let nested: number = 0; //
 
-  function clicked() {
+  const dispatch = createEventDispatcher();
+
+  function clicked(event: Event) {
+    dispatch('clicked');
+
+    event.preventDefault();
+
     history.pushState(null, null, route);
   }
 </script>
 
 <div class="flex select-none flex-row">
   <IndentGuide {nested} />
-  <button disabled={active} class="inline-flex flex-grow" on:click={clicked}>
+  <a href={route.replace(/\/index$/, '')} disabled={active} class="inline-flex flex-grow" on:click={clicked}>
     {#if active}
       <i>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -27,11 +33,11 @@
     {/if}
 
     {kebabToSentenceCase(name)}
-  </button>
+  </a>
 </div>
 
 <style scoped lang="scss">
-  button {
+  a {
     @apply items-center rounded-md text-left font-roboto capitalize;
     @apply hover:bg-elevated active:bg-muted disabled:text-white;
     @apply py-[6px] px-[10px];

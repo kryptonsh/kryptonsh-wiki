@@ -8,6 +8,6 @@
   });
 </script>
 
-<div class="min-h-fit overflow-auto" bind:this={el}>
+<div class="min-h-fit flex-grow overflow-auto" bind:this={el}>
   <slot />
 </div>
