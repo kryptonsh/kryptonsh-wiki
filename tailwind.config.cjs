@@ -15,7 +15,6 @@ const theme = {
     muted: '#272727',
   },
   fontFamily: {
-    ubuntu: ['Ubuntu', 'sans-serif'],
     roboto: ['Roboto', 'sans-serif'],
     condensed: ['Roboto Condensed', 'sans-serif'],
     sans: ['Roboto', 'sans-serif'],
