@@ -161,10 +161,9 @@ dist
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+!.yarn/cache
 
-# if you are NOT using Zero-installs, then:
-# comment the following lines
-# !.yarn/cache
+yarn-error.log
 
 # JetBrains Rider
 .idea/
