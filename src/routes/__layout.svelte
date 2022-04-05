@@ -10,15 +10,15 @@
 </script>
 
 <svelte:head>
-  <title>krypton.sh - Wiki{$activeNode ? ` - ${nodeName}` : ''}</title>
+  <title>krypton.sh - wiki{$activeNode ? ` - ${nodeName}` : ''}</title>
   <meta content="en_US" name="locale" />
   <meta content="#1a1c1d" name="theme-color" />
   <meta content="yep wiki :) :D" name="description" />
   <meta content="yep wiki :) :D" property="og:description" />
   <meta content="yep wiki :) :D" name="twitter:description" />
 
-  <meta content="krypton.sh - wiki" property="og:title" />
-  <meta content="krypton.sh - wiki" name="twitter:title" />
+  <meta content="krypton.sh - wiki{$activeNode ? ` - ${nodeName}` : ''}" property="og:title" />
+  <meta content="krypton.sh - wiki{$activeNode ? ` - ${nodeName}` : ''}" name="twitter:title" />
   <meta content="krypton.sh" property="og:site_name" />
 
   <meta content="website" property="og:type" />
