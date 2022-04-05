@@ -2,6 +2,7 @@
   <div class="flex-grow" />
   <a class="font-mono" href="/">Home</a>
   <a class="font-mono" href="/search/">Search</a>
+  <a class="font-mono" href="https://wiki.krypton.sh">Wiki</a>
   <a class="font-mono" href="https://discord.gg/rkj9TSn7Vz">Discord</a>
   <div class="flex-grow" />
 </nav>

@@ -1,16 +1,17 @@
 <script lang="ts">
-  import SidebarButton from './SidebarButton.svelte';
-  import SidebarGroup from './SidebarGroup.svelte';
+  import { getFriendlyNodeName } from '$lib/utils';
   import SidebarNode from './SidebarNode.svelte';
 
-  export let rootNode;
+  export let rootNode: RNodeRuntime;
 
   let nodeTree = [];
 
   function simplify(node: RNodeRuntime) {
+    console.log({ id: node.id });
+
     return {
       id: node.id,
-      name: node.name === 'index' ? node.parent.name ?? 'home' : node.name,
+      name: getFriendlyNodeName(node),
       path: node.path,
       children: node.module ? null : node.children.map(simplify),
     };
@@ -27,7 +28,6 @@
   $: {
     nodeTree = [];
     getNodeTree(rootNode);
-    // console.log(nodeTree);
   }
 </script>
 
