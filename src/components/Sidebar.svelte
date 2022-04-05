@@ -7,8 +7,6 @@
   let nodeTree = [];
 
   function simplify(node: RNodeRuntime) {
-    console.log({ id: node.id });
-
     return {
       id: node.id,
       name: getFriendlyNodeName(node),
