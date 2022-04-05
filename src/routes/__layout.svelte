@@ -19,7 +19,7 @@
 
   <meta content="krypton.sh - wiki" property="og:title" />
   <meta content="krypton.sh - wiki" name="twitter:title" />
-  <meta content="krypton.sh - wiki" property="og:site_name" />
+  <meta content="krypton.sh" property="og:site_name" />
 
   <meta content="website" property="og:type" />
   <meta content="https://wiki.krypton.sh/" property="og:url" />
