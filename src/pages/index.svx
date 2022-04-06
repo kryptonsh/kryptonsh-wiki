@@ -1,3 +1,6 @@
-# Home
+# ROMs
 
-![your-pic-caption-name](/images/home/bvoo.gif)
+- A ROM (Read-Only Memory) is a type of non-volatile memory that is used in electronics, like game cartidges or on-chip memory.
+- For the purposes of this wiki, ROMs are synonymous with games on the main site, [krypton.sh](https://krypton.sh/).
+
+![Pokemon Silver ROM Cartridge](/images/home/PokemonSilverBoard.jpg)
