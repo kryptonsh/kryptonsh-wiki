@@ -40,7 +40,7 @@
   .sidebar-toggle {
     @apply relative flex fill-[#a9a9a9] hover:cursor-pointer hover:fill-white md:hidden;
 
-    transition: all 0s none;
+    transition: none;
 
     width: $header-height;
     height: $header-height;
@@ -50,6 +50,10 @@
 
       width: 1.25rem;
       height: 1.25rem;
+
+      path {
+        transition: none;
+      }
     }
   }
 </style>
