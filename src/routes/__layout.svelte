@@ -4,6 +4,7 @@
   import { activeNode, getFriendlyNodeName, kebabToSentenceCase } from '$lib/utils';
 
   let nodeName = '';
+
   $: {
     nodeName = $activeNode ? kebabToSentenceCase(getFriendlyNodeName($activeNode)) : '';
   }
@@ -11,6 +12,7 @@
 
 <svelte:head>
   <title>krypton.sh - wiki{$activeNode ? ` - ${nodeName}` : ''}</title>
+
   <meta content="en_US" name="locale" />
   <meta content="#1a1c1d" name="theme-color" />
   <meta content="yep wiki :) :D" name="description" />

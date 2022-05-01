@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts">
   import { activeNode } from '$lib/utils';
   import { createRouter, Router } from '@roxi/routify';
   import routes from '../../.routify/routes.default';
@@ -9,10 +9,6 @@
   const router = createRouter({ routes });
   const rootNode = router.rootNode;
 
-  export const load = ({ url }) => router.url.replace(url.pathname);
-</script>
-
-<script lang="ts">
   router &&
     router.activeRoute.subscribe((activeRoute) => {
       if (activeRoute) {
