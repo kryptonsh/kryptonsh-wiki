@@ -11,7 +11,7 @@
     return {
       id: node.id,
       name: getFriendlyNodeName(node),
-      path: node.path,
+      path: node.path.endsWith('index') ? node.path.slice(0, -5) : node.path,
       children: node.module ? null : node.children.map(simplify),
     };
   }
