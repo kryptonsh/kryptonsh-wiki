@@ -5,6 +5,7 @@
   - [Headers](#headers)
   - [Blockquotes](#blockquotes)
   - [Lists](#lists)
+  - [Tables](#tables)
   - [Code Blocks](#code-blocks)
 - [Span Elements](#span-elements)
   - [Links](#links)
@@ -214,6 +215,17 @@ to be indented _twice_ -- 8 spaces or two tabs:
         <code>This is a code block
         inside a list item.</code>
 
+### Tables
+
+<!-- hello bvoo hi  wawa  hey help i want colors how where hwat saved -->
+
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+
 ### Code Blocks
 
 Pre-formatted code blocks are used for writing about programming or
@@ -300,8 +312,3 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
