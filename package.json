@@ -15,6 +15,7 @@
     "build-prod": "cross-env NODE_ENV=production svelte-kit build"
   },
   "dependencies": {
+    "dayjs": "^1.11.1",
     "github-markdown-css": "^5.1.0",
     "overlayscrollbars": "^1.13.1"
   },

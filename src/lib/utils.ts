@@ -13,4 +13,22 @@ export function kebabToSentenceCase(str: string) {
     .join(' ');
 }
 
+const repoBase = {
+  name: 'kryptonsh-wiki',
+  owner: 'kryptonsh',
+};
+
+/**
+ * Get url to last commit from github api
+ * @param path Page path
+ * @returns {URL} Url
+ */
+export function getLastCommitUrl(path: string): URL {
+  return new URL(`https://api.github.com/repos/${repoBase.owner}/${repoBase.name}/commits?path=${path}&per_page=1&page=1`);
+}
+
+export function fragmentToPath(fragment: string) {
+  return fragment.replace('_default', '').replace('_', '/');
+}
+
 export const activeNode: Writable<RNodeRuntime> = writable(null);

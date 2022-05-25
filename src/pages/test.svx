@@ -217,8 +217,6 @@ to be indented _twice_ -- 8 spaces or two tabs:
 
 ### Tables
 
-<!-- hello bvoo hi  wawa  hey help i want colors how where hwat saved -->
-
 | First Header | Second Header |
 | ------------ | ------------- |
 | Content Cell | Content Cell  |

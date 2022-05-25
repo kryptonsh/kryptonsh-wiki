@@ -672,6 +672,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dayjs@npm:^1.11.1":
+  version: 1.11.1
+  resolution: "dayjs@npm:1.11.1"
+  checksum: d5fefd79935f64a3c262e67af7ebeca180bc402b3e99be4e12d20b6d438af3f86d507ba1cbaff95dc0b4e67f1067cea3eaf37b6b74f5494fdd4a6a2909514cd1
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.1, debug@npm:^4.3.3":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -1499,6 +1506,7 @@ __metadata:
     "@types/overlayscrollbars": ^1.12.1
     autoprefixer: ^10.4.5
     cross-env: ^7.0.3
+    dayjs: ^1.11.1
     github-markdown-css: ^5.1.0
     mdsvex: ^0.10.5
     overlayscrollbars: ^1.13.1
