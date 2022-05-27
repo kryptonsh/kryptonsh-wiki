@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "voorjaar.windicss-intellisense",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "Vue.volar"
+  ]
+}
