@@ -1,20 +1,10 @@
 <script setup lang="ts">
-import type { NodeTreeNode } from '~~/composables/useNodeTree';
-
 const route = useRoute();
 const activeNode = useActiveNode();
-const nodeTree = useNodeTree();
 const sidebarOpen = useSidebarOpen();
 
-const { data: navigation } = await useAsyncData('navigation', () => {
-  return fetchContentNavigation();
-});
-
-nodeTree.value = navigation.value as NodeTreeNode[];
-
-activeNode.value = (await queryContent(route.path)
-  .only(['_path', 'title', 'navTitle'])
-  .findOne()) as unknown as NodeTreeNode;
+const content = await queryContent(route.path).only(['_path', 'title', 'navTitle']).findOne();
+activeNode.value = content as any;
 </script>
 
 <template>
@@ -27,8 +17,9 @@ activeNode.value = (await queryContent(route.path)
     <main
       class="lg:max-w-8xl min-h-page relative mx-auto flex max-w-full flex-col-reverse px-4 pb-4 sm:px-6 sm:pb-6 lg:grid lg:grid-cols-12 lg:gap-8"
     >
-      <!-- <Sidebar /> -->
-      <Navvy class="hidden lg:sticky" />
+      <ContentNavigation v-slot="{ navigation }">
+        <Navvy class="hidden lg:sticky" :navigation="navigation" />
+      </ContentNavigation>
 
       <section class="relative flex flex-1 flex-col pt-12 lg:col-span-8 lg:mt-0 lg:pt-8">
         <slot></slot>
@@ -42,7 +33,7 @@ activeNode.value = (await queryContent(route.path)
       <div id="mobile-nav-scrim" :class="sidebarOpen ? 'opacity-100' : 'opacity-0'"></div>
       <div id="mobile-nav-surface" :class="sidebarOpen ? 'opacity-100' : 'pointer-events-none opacity-0'">
         <div class="flex flex-row justify-end p-2">
-          <button class="icon" @click="sidebarOpen = !sidebarOpen">
+          <button class="icon" aria-label="Close sidebar" @click="sidebarOpen = !sidebarOpen">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -64,8 +55,10 @@ activeNode.value = (await queryContent(route.path)
             </svg>
           </button>
         </div>
-        <div class="z-40 mb-2 max-h-full overflow-y-auto px-0 pt-4">
-          <Navvy />
+        <div class="z-40 mb-2 max-h-full overflow-y-auto p-0">
+          <ContentNavigation v-slot="{ navigation }">
+            <Navvy :navigation="navigation" />
+          </ContentNavigation>
         </div>
       </div>
     </Teleport>

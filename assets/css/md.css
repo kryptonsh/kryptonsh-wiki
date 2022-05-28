@@ -280,3 +280,9 @@
 .md > :last-child {
   margin-bottom: 0;
 }
+
+
+.md pre {
+  /* background-color: #1f1f1f; */
+  @apply bg-bgdark-400;
+}

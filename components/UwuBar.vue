@@ -20,9 +20,13 @@ const sidebarOpen = useSidebarOpen();
           <a href="https://discord.gg/rkj9TSn7Vz">Discord</a>
         </nav>
       </div>
-      <div class="flex flex-none items-center justify-end lg:col-span-2 gap-2 lg:pl-4">
+      <div class="flex flex-none items-center justify-end gap-2 lg:col-span-2 lg:pl-4">
         <ColorModeSwitch />
-        <button class="icon relative z-10 h-8 w-8 rounded-xl lg:hidden" @click="sidebarOpen = !sidebarOpen">
+        <button
+          class="icon relative z-10 h-8 w-8 rounded-xl lg:hidden"
+          aria-label="Open sidebar"
+          @click="sidebarOpen = !sidebarOpen"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -1,18 +1,35 @@
 <script setup lang="ts">
-import type { Ref } from 'vue';
-import type { NodeTreeNode } from '~~/composables/useNodeTree';
+type NodeTreeNode = { _path: string; active: boolean; children: NodeTreeNode[] };
 
-const nodeTree = useNodeTree();
+type NavItem = {
+  title: string;
+  _path: string;
+  _id?: string;
+  _draft?: boolean;
+  children?: NavItem[];
+
+  [key: string]: any;
+};
+
+const props = defineProps<{
+  navigation?: NavItem[];
+}>();
+
 const activeNode = useActiveNode();
 
-const computedTree = ref([]) as Ref<NodeTreeNode[]>;
+const computedTree = ref([]);
 
 watch(
-  nodeTree,
+  () => props.navigation,
   () => {
-    computedTree.value = nodeTree.value.map((n) => ({
+    if (!props.navigation) {
+      computedTree.value = [];
+      return;
+    }
+
+    computedTree.value = props.navigation?.map((n) => ({
       ...n,
-      children: n.children.map((cn) => ({
+      children: n.children?.map((cn) => ({
         ...cn,
         title: cn._path === n._path ? 'Home' : cn.title,
       })),

@@ -21,8 +21,6 @@ const navTree = ref([] as NavNode[]);
 const route = useRoute();
 
 function isActive(node: NavNode) {
-  console.log(node, route.path);
-
   return node._path === route.path;
 }
 

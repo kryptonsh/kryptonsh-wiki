@@ -7,7 +7,7 @@ function onClick() {
 </script>
 
 <template>
-  <button aria-label="Color Mode" class="flex" @click="onClick">
+  <button aria-label="Color mode" class="flex" @click="onClick">
     <ColorScheme placeholder="...">
       <Icon v-if="theme.value === 'dark'" class="icon" name="heroicons-outline:moon" />
       <Icon v-else class="icon" name="heroicons-outline:sun" />

@@ -43,4 +43,33 @@ body {
 .dark .surface-blurry {
   @apply bg-bgdark-50 bg-opacity-90 backdrop-blur-sm backdrop-filter;
 }
+
+* {
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  background-color: transparent;
+  height: 12px;
+  width: 12px;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  transition: background 0.2s ease-in-out;
+  border: 3px solid transparent;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  border-radius: 9999px;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgba(50, 50, 50, var(--tw-bg-opacity));
+}
 </style>
